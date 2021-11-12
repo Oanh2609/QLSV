@@ -1,0 +1,75 @@
+﻿@model QLSV.Models.Diem
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Diem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MonHoc.TenMonHoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonHoc.TenMonHoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaSinhVien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSinhVien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HocKi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HocKi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiemA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiemB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiemC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiemTB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiemTB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
