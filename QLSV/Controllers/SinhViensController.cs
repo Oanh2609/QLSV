@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -12,6 +13,7 @@ namespace QLSV.Controllers
 {
     public class SinhViensController : Controller
     {
+
         private DBcontext db = new DBcontext();
 
         // GET: SinhViens
@@ -48,10 +50,16 @@ namespace QLSV.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,MaSinhVien,TenSinhVien,GioiTinh,NgaySinh,DiaChi,Email,MaLop")] SinhVien sinhVien)
+        public ActionResult Create(/*[Bind(Include = "ID,MaSinhVien,TenSinhVien,GioiTinh,NgaySinh,DiaChi,Email,MaLop")]*/ SinhVien sinhVien)
         {
             if (ModelState.IsValid)
             {
+                string fileName = Path.GetFileNameWithoutExtension(sinhVien.SVImagesFile.FileName);
+                string extension = Path.GetExtension(sinhVien.SVImagesFile.FileName);
+                fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                sinhVien.SVimages = "/Images/" + fileName;
+                fileName = Path.Combine(Server.MapPath("~/Images/"), fileName);
+                sinhVien.SVImagesFile.SaveAs(fileName);
                 db.SinhViens.Add(sinhVien);
                 db.SaveChanges();
                 return RedirectToAction("Index");

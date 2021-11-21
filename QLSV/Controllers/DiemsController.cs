@@ -10,6 +10,7 @@ using QLSV.Models;
 
 namespace QLSV.Controllers
 {
+    //[Authorize(Roles = "SinhVien")]
     public class DiemsController : Controller
     {
         private DBcontext db = new DBcontext();

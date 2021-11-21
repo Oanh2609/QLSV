@@ -5,13 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Môn Học</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm Mới", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaMonHoc)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.TenMonHoc)
         </th>
@@ -22,19 +25,22 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenMonHoc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoTin)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaMonHoc }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaMonHoc }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaMonHoc })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaMonHoc)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenMonHoc)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SoTin)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaMonHoc }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaMonHoc }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaMonHoc })
+    </td>
+</tr>
 }
 
 </table>

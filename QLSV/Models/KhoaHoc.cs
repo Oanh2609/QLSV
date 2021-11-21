@@ -11,8 +11,10 @@ namespace QLSV.Models
         [Key]
         //public int ID { get; set; }
         [Required(ErrorMessage = "Mã khoá học không được bỏ trống")]
+        [Display(Name = "Mã Khoá Học")]
         public string MaKhoaHoc { get; set; }
         [Required(ErrorMessage = "Tên khoá học không được bỏ trống")]
+        [Display(Name = "Tên Khoá Học")]
         public string TenKhoaHoc { get; set; }
     }
 }

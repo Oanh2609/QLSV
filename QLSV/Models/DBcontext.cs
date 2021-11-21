@@ -18,6 +18,8 @@ namespace QLSV.Models
         public virtual DbSet<Lop> Lops { get; set; }
         public virtual DbSet<HeDaotao> HeDaotaos { get; set; }
         public virtual DbSet<SinhVien> SinhViens { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

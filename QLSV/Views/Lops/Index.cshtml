@@ -5,13 +5,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Lớp</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p> 
+    @Html.ActionLink("Thêm Mới", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaLop)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.HeDaotao.TenHeDT)
         </th>
@@ -28,25 +31,28 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.HeDaotao.TenHeDT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Khoa.TenKhoa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.KhoaHoc.TenKhoaHoc)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenLop)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaLop }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaLop }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaLop })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaLop)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HeDaotao.TenHeDT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Khoa.TenKhoa)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KhoaHoc.TenKhoaHoc)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenLop)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaLop }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaLop }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaLop })
+    </td>
+</tr>
 }
 
 </table>
