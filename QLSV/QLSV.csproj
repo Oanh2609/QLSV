@@ -179,6 +179,7 @@
     <Compile Include="Models\SinhVien.cs" />
     <Compile Include="Models\StringProcess.cs" />
     <Compile Include="Models\UserRoleProvidercs.cs" />
+    <Compile Include="Models\ViewIndex.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

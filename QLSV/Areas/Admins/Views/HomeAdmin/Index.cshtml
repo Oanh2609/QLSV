@@ -1,8 +1,58 @@
-﻿
+﻿@model IEnumerable<QLSV.Models.ViewIndex>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admins/Views/Shared/_LayoutADM.cshtml";
 }
 
-<h2>Admin</h2>
+<h2>Tìm kiếm</h2>
+<form action="HomeAdmin">
+    <div class="form-group d-flex">
+        <label class="control-label">Từ khoá:</label>
+        <input class="form-control" name="KeyWords" placeholder="Nhập mã sinh viên..." />
+    </div>
+    <input type="submit" class="btn btn-success" value="Tìm kiếm" />
+</form>
+
+@if (Model != null)
+{
+    <table class="table mt-5" style="margin-top:15px">
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Msv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hvt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiemTB)
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Msv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hvt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiemTB)
+        </td>
+
+    </tr>
+        }
+
+    </table>
+
+}
 
