@@ -2,14 +2,12 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Areas/Admins/Views/Shared/_LayoutADM.cshtml";
+    Layout = "~/Areas/SinhVien/Views/Shared/_LayoutNV.cshtml";
 }
 
 <h2>Điểm</h2>
 
-<p>
-    @Html.ActionLink("Thêm Mới", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -59,11 +57,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.DiemTB)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
+       
     </tr>
 }
 

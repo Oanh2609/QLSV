@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QLSV.Models.Lop>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admins/Views/Shared/_LayoutADM.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HeDaotao.TenHeDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Khoa.TenKhoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhoaHoc.TenKhoaHoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenLop)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeDaotao.TenHeDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Khoa.TenKhoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhoaHoc.TenKhoaHoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLop)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaLop }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaLop }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaLop })
+        </td>
+    </tr>
+}
+
+</table>

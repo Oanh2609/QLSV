@@ -53,9 +53,8 @@ namespace QLSV.Areas.Admins.Controllers
                              //MaKhoa = kh.TenKhoa,
                              DiemTB = point.DiemTB,
                              Lop = lop.TenLop
-                         };
-
-            return View(result);
+                         };             
+            return View(result);    
         }
 
     }

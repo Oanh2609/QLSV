@@ -1,4 +1,4 @@
-﻿@model IEnumerable<QLSV.Models.SinhVien>
+﻿@model IEnumerable<QLSV.Models.Diem>
 
 @{
     ViewBag.Title = "Index";
@@ -13,28 +13,25 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Lop.TenLop)
+            @Html.DisplayNameFor(model => model.MonHoc.TenMonHoc)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.MaSinhVien)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TenSinhVien)
+            @Html.DisplayNameFor(model => model.HocKi)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.GioiTinh)
+            @Html.DisplayNameFor(model => model.DiemA)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NgaySinh)
+            @Html.DisplayNameFor(model => model.DiemB)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DiaChi)
+            @Html.DisplayNameFor(model => model.DiemC)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SVimages)
+            @Html.DisplayNameFor(model => model.DiemTB)
         </th>
         <th></th>
     </tr>
@@ -42,28 +39,25 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Lop.TenLop)
+            @Html.DisplayFor(modelItem => item.MonHoc.TenMonHoc)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.MaSinhVien)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TenSinhVien)
+            @Html.DisplayFor(modelItem => item.HocKi)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.GioiTinh)
+            @Html.DisplayFor(modelItem => item.DiemA)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.NgaySinh)
+            @Html.DisplayFor(modelItem => item.DiemB)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DiaChi)
+            @Html.DisplayFor(modelItem => item.DiemC)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SVimages)
+            @Html.DisplayFor(modelItem => item.DiemTB)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

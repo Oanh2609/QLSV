@@ -129,7 +129,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admins\AdminsAreaRegistration.cs" />
+    <Compile Include="Areas\Admins\Controllers\DiemsADMController.cs" />
     <Compile Include="Areas\Admins\Controllers\HomeAdminController.cs" />
+    <Compile Include="Areas\Admins\Controllers\LopsADMController.cs" />
+    <Compile Include="Areas\Admins\Controllers\MonHocsADMController.cs" />
     <Compile Include="Areas\SinhVien\Controllers\SinhVienController.cs" />
     <Compile Include="Areas\SinhVien\SinhVienAreaRegistration.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
@@ -200,6 +203,21 @@
     <Content Include="Areas\Admins\Views\HomeAdmin\Index.cshtml" />
     <Content Include="Areas\SinhVien\Views\Shared\_LayoutNV.cshtml" />
     <Content Include="Areas\SinhVien\Views\SinhVien\Index.cshtml" />
+    <Content Include="Areas\Admins\Views\LopsADM\Create.cshtml" />
+    <Content Include="Areas\Admins\Views\LopsADM\Delete.cshtml" />
+    <Content Include="Areas\Admins\Views\LopsADM\Details.cshtml" />
+    <Content Include="Areas\Admins\Views\LopsADM\Edit.cshtml" />
+    <Content Include="Areas\Admins\Views\LopsADM\Index.cshtml" />
+    <Content Include="Areas\Admins\Views\DiemsADM\Create.cshtml" />
+    <Content Include="Areas\Admins\Views\DiemsADM\Delete.cshtml" />
+    <Content Include="Areas\Admins\Views\DiemsADM\Details.cshtml" />
+    <Content Include="Areas\Admins\Views\DiemsADM\Edit.cshtml" />
+    <Content Include="Areas\Admins\Views\DiemsADM\Index.cshtml" />
+    <Content Include="Areas\Admins\Views\MonHocsADM\Create.cshtml" />
+    <Content Include="Areas\Admins\Views\MonHocsADM\Delete.cshtml" />
+    <Content Include="Areas\Admins\Views\MonHocsADM\Details.cshtml" />
+    <Content Include="Areas\Admins\Views\MonHocsADM\Edit.cshtml" />
+    <Content Include="Areas\Admins\Views\MonHocsADM\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -225,15 +243,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Diems\Create.cshtml" />
-    <Content Include="Views\Diems\Delete.cshtml" />
-    <Content Include="Views\Diems\Details.cshtml" />
-    <Content Include="Views\Diems\Edit.cshtml" />
     <Content Include="Views\Diems\Index.cshtml" />
-    <Content Include="Views\MonHocs\Create.cshtml" />
-    <Content Include="Views\MonHocs\Delete.cshtml" />
-    <Content Include="Views\MonHocs\Details.cshtml" />
-    <Content Include="Views\MonHocs\Edit.cshtml" />
     <Content Include="Views\MonHocs\Index.cshtml" />
     <Content Include="Views\HeDaotaos\Create.cshtml" />
     <Content Include="Views\HeDaotaos\Delete.cshtml" />
@@ -250,16 +260,7 @@
     <Content Include="Views\KhoaHocs\Details.cshtml" />
     <Content Include="Views\KhoaHocs\Edit.cshtml" />
     <Content Include="Views\KhoaHocs\Index.cshtml" />
-    <Content Include="Views\Lops\Create.cshtml" />
-    <Content Include="Views\Lops\Delete.cshtml" />
-    <Content Include="Views\Lops\Details.cshtml" />
-    <Content Include="Views\Lops\Edit.cshtml" />
     <Content Include="Views\Lops\Index.cshtml" />
-    <Content Include="Views\SinhViens\Create.cshtml" />
-    <Content Include="Views\SinhViens\Delete.cshtml" />
-    <Content Include="Views\SinhViens\Details.cshtml" />
-    <Content Include="Views\SinhViens\Edit.cshtml" />
-    <Content Include="Views\SinhViens\Index.cshtml" />
     <Content Include="Views\Roles\Create.cshtml" />
     <Content Include="Views\Roles\Delete.cshtml" />
     <Content Include="Views\Roles\Details.cshtml" />
@@ -267,6 +268,11 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Accounts\Login.cshtml" />
     <Content Include="Views\Accounts\Register.cshtml" />
+    <Content Include="Views\SinhViens\Details.cshtml" />
+    <Content Include="Views\SinhViens\Create.cshtml" />
+    <Content Include="Views\SinhViens\Edit.cshtml" />
+    <Content Include="Views\SinhViens\Delete.cshtml" />
+    <Content Include="Views\SinhViens\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
