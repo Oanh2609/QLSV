@@ -3,10 +3,47 @@ namespace QLSV.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class create_tblan : DbMigration
+    public partial class create_tbl_new : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Accounts",
+                c => new
+                    {
+                        UseName = c.String(nullable: false, maxLength: 128),
+                        PassWord = c.String(nullable: false),
+                        RoleID = c.String(nullable: false, maxLength: 10),
+                    })
+                .PrimaryKey(t => t.UseName);
+            
+            CreateTable(
+                "dbo.Diems",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        MaSinhVien = c.String(nullable: false),
+                        MaMonHoc = c.String(maxLength: 128),
+                        HocKi = c.String(nullable: false),
+                        DiemA = c.Double(nullable: false),
+                        DiemB = c.Double(nullable: false),
+                        DiemC = c.Double(nullable: false),
+                        DiemTB = c.Double(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID)
+                .ForeignKey("dbo.MonHocs", t => t.MaMonHoc)
+                .Index(t => t.MaMonHoc);
+            
+            CreateTable(
+                "dbo.MonHocs",
+                c => new
+                    {
+                        MaMonHoc = c.String(nullable: false, maxLength: 128),
+                        TenMonHoc = c.String(nullable: false),
+                        SoTin = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.MaMonHoc);
+            
             CreateTable(
                 "dbo.HeDaotaos",
                 c => new
@@ -55,6 +92,15 @@ namespace QLSV.Migrations
                 .Index(t => t.MaKhoaHoc);
             
             CreateTable(
+                "dbo.Roles",
+                c => new
+                    {
+                        RoleID = c.String(nullable: false, maxLength: 10),
+                        RoleName = c.String(maxLength: 50),
+                    })
+                .PrimaryKey(t => t.RoleID);
+            
+            CreateTable(
                 "dbo.SinhViens",
                 c => new
                     {
@@ -65,6 +111,7 @@ namespace QLSV.Migrations
                         NgaySinh = c.String(nullable: false),
                         DiaChi = c.String(nullable: false),
                         Email = c.String(nullable: false),
+                        SVimages = c.String(),
                         MaLop = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.ID)
@@ -79,15 +126,21 @@ namespace QLSV.Migrations
             DropForeignKey("dbo.Lops", "MaKhoaHoc", "dbo.KhoaHocs");
             DropForeignKey("dbo.Lops", "MaKhoa", "dbo.Khoas");
             DropForeignKey("dbo.Lops", "MaHeDT", "dbo.HeDaotaos");
+            DropForeignKey("dbo.Diems", "MaMonHoc", "dbo.MonHocs");
             DropIndex("dbo.SinhViens", new[] { "MaLop" });
             DropIndex("dbo.Lops", new[] { "MaKhoaHoc" });
             DropIndex("dbo.Lops", new[] { "MaHeDT" });
             DropIndex("dbo.Lops", new[] { "MaKhoa" });
+            DropIndex("dbo.Diems", new[] { "MaMonHoc" });
             DropTable("dbo.SinhViens");
+            DropTable("dbo.Roles");
             DropTable("dbo.Lops");
             DropTable("dbo.Khoas");
             DropTable("dbo.KhoaHocs");
             DropTable("dbo.HeDaotaos");
+            DropTable("dbo.MonHocs");
+            DropTable("dbo.Diems");
+            DropTable("dbo.Accounts");
         }
     }
 }
