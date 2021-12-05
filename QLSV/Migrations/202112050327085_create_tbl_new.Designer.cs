@@ -7,13 +7,13 @@ namespace QLSV.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class thmphanquyen : IMigrationMetadata
+    public sealed partial class create_tbl_new : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(thmphanquyen));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(create_tbl_new));
         
         string IMigrationMetadata.Id
         {
-            get { return "202111140518106_thm-phan-quyen"; }
+            get { return "202112050327085_create_tbl_new"; }
         }
         
         string IMigrationMetadata.Source

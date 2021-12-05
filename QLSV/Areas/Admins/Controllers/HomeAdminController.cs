@@ -9,13 +9,12 @@ using System.Web.Mvc;
 
 namespace QLSV.Areas.Admins.Controllers
 {
-    [Authorize(Roles = "ADMIN")]
+   // [Authorize(Roles = "ADMIN")]
     public class HomeAdminController : Controller
     {
         private readonly DBcontext _db=new DBcontext();
         //public HomeAdminController(DBcontext db)
         //{
-        //    _db = db;
         //}
         // GET: Admins/HomeAdmin
         public ActionResult Index(string KeyWords)

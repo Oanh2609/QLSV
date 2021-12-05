@@ -148,25 +148,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111081341183_create_tbl a.cs" />
-    <Compile Include="Migrations\202111081341183_create_tbl a.Designer.cs">
-      <DependentUpon>202111081341183_create_tbl a.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111081422386_create_tbl an.cs" />
-    <Compile Include="Migrations\202111081422386_create_tbl an.Designer.cs">
-      <DependentUpon>202111081422386_create_tbl an.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111140446475_them khoa.cs" />
-    <Compile Include="Migrations\202111140446475_them khoa.Designer.cs">
-      <DependentUpon>202111140446475_them khoa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111140518106_thm-phan-quyen.cs" />
-    <Compile Include="Migrations\202111140518106_thm-phan-quyen.Designer.cs">
-      <DependentUpon>202111140518106_thm-phan-quyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202111210435500_ad-oluommim.cs" />
-    <Compile Include="Migrations\202111210435500_ad-oluommim.Designer.cs">
-      <DependentUpon>202111210435500_ad-oluommim.cs</DependentUpon>
+    <Compile Include="Migrations\202112050327085_create_tbl_new.cs" />
+    <Compile Include="Migrations\202112050327085_create_tbl_new.Designer.cs">
+      <DependentUpon>202112050327085_create_tbl_new.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202112021501304_create-tbl_am.cs" />
     <Compile Include="Migrations\202112021501304_create-tbl_am.Designer.cs">
@@ -303,20 +287,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202111081341183_create_tbl a.resx">
-      <DependentUpon>202111081341183_create_tbl a.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111081422386_create_tbl an.resx">
-      <DependentUpon>202111081422386_create_tbl an.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111140446475_them khoa.resx">
-      <DependentUpon>202111140446475_them khoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111140518106_thm-phan-quyen.resx">
-      <DependentUpon>202111140518106_thm-phan-quyen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202111210435500_ad-oluommim.resx">
-      <DependentUpon>202111210435500_ad-oluommim.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112050327085_create_tbl_new.resx">
+      <DependentUpon>202112050327085_create_tbl_new.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112021501304_create-tbl_am.resx">
       <DependentUpon>202112021501304_create-tbl_am.cs</DependentUpon>
