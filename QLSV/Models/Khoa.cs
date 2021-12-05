@@ -19,7 +19,7 @@ namespace QLSV.Models
         public string TenKhoa { get; set; }
         [Display(Name = "Địa Chỉ")]
         public string DiaChi { get; set; }
-        [Display(Name = "Điện thoại")]
-        public int DienThoai { get; set; }
+        //[Display(Name = "Điện thoại")]
+       // public int DienThoai { get; set; }
     }
 }

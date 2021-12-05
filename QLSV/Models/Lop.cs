@@ -25,7 +25,7 @@ namespace QLSV.Models
         public string MaHeDT { get; set; }
         [ForeignKey("MaHeDT")]
         public virtual HeDaotao HeDaotao { get; set; }
-        [Display(Name = "Tên Khoá Học")]
+        [Display(Name = "Tên khoa")]
         public string MaKhoaHoc { get; set; }
         [ForeignKey("MaKhoaHoc")]
         public virtual KhoaHoc KhoaHoc { get; set; }

@@ -24,13 +24,15 @@ namespace QLSV.Areas.SinhVien.Controllers
                               join point in _db.Diems on sv.MaSinhVien equals point.MaSinhVien
                               join lop in _db.Lops on sv.MaLop equals lop.MaLop
                               // kh.TenKhoa.Contains(KeyWords)
+
                               select new ViewIndex
                               {
                                   Msv = sv.MaSinhVien,
                                   Hvt = sv.TenSinhVien,
                                   //MaKhoa = kh.TenKhoa,
                                   DiemTB = point.DiemTB,
-                                  Lop = lop.TenLop
+                                  Lop = lop.TenLop,
+                                  //TenMH= mh.MaMonHoc
                               };
 
                 return View(result1);
@@ -50,8 +52,8 @@ namespace QLSV.Areas.SinhVien.Controllers
                              DiemTB = point.DiemTB,
                              Lop = lop.TenLop
                          };
-
             return View(result);
         }
+
     }
 }

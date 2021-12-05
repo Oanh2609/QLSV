@@ -51,7 +51,7 @@ namespace QLSV.Controllers
             if (ModelState.IsValid)
             {
                 db.Khoas.Add(khoa);
-                db.SaveChanges();
+                _= db.SaveChanges();
                 return RedirectToAction("Index");
             }
 

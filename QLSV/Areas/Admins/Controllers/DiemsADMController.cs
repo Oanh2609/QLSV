@@ -53,6 +53,7 @@ namespace QLSV.Areas.Admins.Controllers
         {
             if (ModelState.IsValid)
             {
+                diem.DiemTB = (diem.DiemA * 0.6) + diem.DiemB * 0.3 + diem.DiemC * 0.1;
                 db.Diems.Add(diem);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

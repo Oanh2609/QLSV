@@ -27,7 +27,7 @@ namespace QLSV.Models
         [Display(Name = "Địa Chỉ")]
         public string DiaChi { get; set; }
         [Required(ErrorMessage = "Email không được bỏ trống ")]
-        
+
         public string Email { get; set; }
 
 
@@ -36,7 +36,7 @@ namespace QLSV.Models
         public HttpPostedFileBase SVImagesFile { get; set; }
 
 
-        [Display(Name = "Tên Lớp")]
+        [Display(Name = "Tên lớp")]
         public string MaLop { get; set; }
         [ForeignKey("MaLop")]
         public virtual Lop Lop { get; set; }

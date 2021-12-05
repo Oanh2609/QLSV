@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -21,6 +22,7 @@ namespace QLSV.Models
         [StringLength(10)]
         [Display(Name = "Phân Quyền")]
         [Required(ErrorMessage = "Phân Quyền không được để trống !!!")]
+       
         public string RoleID { get; set; }
     }
 }

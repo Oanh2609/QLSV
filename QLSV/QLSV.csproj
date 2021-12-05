@@ -133,7 +133,7 @@
     <Compile Include="Areas\Admins\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Admins\Controllers\LopsADMController.cs" />
     <Compile Include="Areas\Admins\Controllers\MonHocsADMController.cs" />
-    <Compile Include="Areas\SinhVien\Controllers\SinhVienController.cs" />
+    <Compile Include="Areas\SinhVien\Controllers\SinhViensController.cs" />
     <Compile Include="Areas\SinhVien\SinhVienAreaRegistration.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\DiemsController.cs" />
@@ -167,6 +167,10 @@
     <Compile Include="Migrations\202111210435500_ad-oluommim.cs" />
     <Compile Include="Migrations\202111210435500_ad-oluommim.Designer.cs">
       <DependentUpon>202111210435500_ad-oluommim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112021501304_create-tbl_am.cs" />
+    <Compile Include="Migrations\202112021501304_create-tbl_am.Designer.cs">
+      <DependentUpon>202112021501304_create-tbl_am.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -218,6 +222,11 @@
     <Content Include="Areas\Admins\Views\MonHocsADM\Details.cshtml" />
     <Content Include="Areas\Admins\Views\MonHocsADM\Edit.cshtml" />
     <Content Include="Areas\Admins\Views\MonHocsADM\Index.cshtml" />
+    <Content Include="Areas\SinhVien\Views\SinhViens\Create.cshtml" />
+    <Content Include="Areas\SinhVien\Views\SinhViens\Delete.cshtml" />
+    <Content Include="Areas\SinhVien\Views\SinhViens\Details.cshtml" />
+    <Content Include="Areas\SinhVien\Views\SinhViens\Edit.cshtml" />
+    <Content Include="Areas\SinhVien\Views\SinhViens\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -308,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111210435500_ad-oluommim.resx">
       <DependentUpon>202111210435500_ad-oluommim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112021501304_create-tbl_am.resx">
+      <DependentUpon>202112021501304_create-tbl_am.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
