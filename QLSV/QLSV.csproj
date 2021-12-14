@@ -148,13 +148,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202112050327085_create_tbl_new.cs" />
-    <Compile Include="Migrations\202112050327085_create_tbl_new.Designer.cs">
-      <DependentUpon>202112050327085_create_tbl_new.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202112021501304_create-tbl_am.cs" />
-    <Compile Include="Migrations\202112021501304_create-tbl_am.Designer.cs">
-      <DependentUpon>202112021501304_create-tbl_am.cs</DependentUpon>
+    <Compile Include="Migrations\202112061349218_Create_tbl_CacBang.cs" />
+    <Compile Include="Migrations\202112061349218_Create_tbl_CacBang.Designer.cs">
+      <DependentUpon>202112061349218_Create_tbl_CacBang.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -287,11 +283,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202112050327085_create_tbl_new.resx">
-      <DependentUpon>202112050327085_create_tbl_new.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202112021501304_create-tbl_am.resx">
-      <DependentUpon>202112021501304_create-tbl_am.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202112061349218_Create_tbl_CacBang.resx">
+      <DependentUpon>202112061349218_Create_tbl_CacBang.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
