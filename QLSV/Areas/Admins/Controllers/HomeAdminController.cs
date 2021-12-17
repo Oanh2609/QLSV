@@ -24,16 +24,15 @@ namespace QLSV.Areas.Admins.Controllers
                 var result1 = from sv in _db.SinhViens
                              join point in _db.Diems on sv.MaSinhVien equals point.MaSinhVien
                              join lop in _db.Lops on sv.MaLop equals lop.MaLop
-                             // kh.TenKhoa.Contains(KeyWords)
+                          
                             
                              select new ViewIndex
                              {
                                  Msv = sv.MaSinhVien,
-                                 Hvt = sv.TenSinhVien,
-                                 //MaKhoa = kh.TenKhoa,
+                                 Hvt = sv.TenSinhVien,                           
                                  DiemTB = point.DiemTB,
                                  Lop = lop.TenLop ,
-                                //TenMH= mh.MaMonHoc
+                                
                              };
 
                 return View(result1);

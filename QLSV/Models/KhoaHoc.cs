@@ -15,6 +15,7 @@ namespace QLSV.Models
         public string MaKhoaHoc { get; set; }
         [Required(ErrorMessage = "Tên khoá học không được bỏ trống")]
         [Display(Name = "Tên Khoá Học")]
+
         public string TenKhoaHoc { get; set; }
     }
 }

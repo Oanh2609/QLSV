@@ -24,5 +24,6 @@ namespace QLSV.Models
         [Required(ErrorMessage = "Phân Quyền không được để trống !!!")]
        
         public string RoleID { get; set; }
+
     }
 }

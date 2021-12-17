@@ -14,6 +14,7 @@ namespace QLSV.Controllers
     {
         private DBcontext db = new DBcontext();
 
+
         // GET: KhoaHocs
         public ActionResult Index()
         {

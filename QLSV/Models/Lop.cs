@@ -10,7 +10,7 @@ namespace QLSV.Models
     public class Lop
     {
         [Key]
-        //public int ID { get; set; }
+        
         [Required(ErrorMessage = "Mã lớp không được bỏ trống")]
         [Display(Name = "Mã Lớp")]
         public string MaLop { get; set; }

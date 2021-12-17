@@ -13,6 +13,7 @@ namespace QLSV.Models
         public int ID { get; set; }
         [Required(ErrorMessage = "Mã Sinh Viên không được bỏ trống ")]
         [Display(Name = "Mã Sinh Viên")]
+
         public string MaSinhVien { get; set; }
         [Required(ErrorMessage = "Tên Sinh Viên không được bỏ trống ")]
         [Display(Name = "Tên Sinh Viên")]

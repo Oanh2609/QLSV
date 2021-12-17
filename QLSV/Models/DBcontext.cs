@@ -10,6 +10,7 @@ namespace QLSV.Models
         public DBcontext()
             : base("name=DBcontext")
         {
+
         }
         public virtual DbSet<MonHoc> MonHocs { get; set; }
         public virtual DbSet<Diem> Diems { get; set; }

@@ -12,9 +12,9 @@ namespace QLSV.Areas.SinhVien.Controllers
     {
         private readonly DBcontext _db = new DBcontext();
         //public HomeAdminController(DBcontext db)
-        //{
-        //    _db = db;
-        //}
+   
+ 
+        
         // GET: Admins/HomeAdmin
         public ActionResult Index(string KeyWords)
         {

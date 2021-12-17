@@ -14,6 +14,7 @@ namespace QLSV.Controllers
     {
         private DBcontext db = new DBcontext();
 
+
         // GET: HeDaotaos
         public ActionResult Index()
         {

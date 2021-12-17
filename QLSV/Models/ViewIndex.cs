@@ -8,6 +8,7 @@ namespace QLSV.Models
 {
     public class ViewIndex
     {
+
         [Display(Name = "Mã Sinh Viên")]
         public string Msv { get; set; }
         [Display(Name = "Họ Và Tên")]

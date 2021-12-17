@@ -20,5 +20,6 @@ namespace QLSV.Models
             }
             return str_md5;
         }
+
     }
 }

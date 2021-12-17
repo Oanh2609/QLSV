@@ -37,6 +37,7 @@ namespace QLSV.Controllers
             return View(diem);
         }
 
+
         // GET: Diems/Create
         public ActionResult Create()
         {

@@ -12,5 +12,6 @@ namespace QLSV.Models
         {
             return FormsAuthentication.HashPasswordForStoringInConfigFile(pass.Trim(), "MD5");
         }
+
     }
 }

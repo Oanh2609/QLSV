@@ -11,6 +11,7 @@ namespace QLSV.Models
         [Key]
         [Required(ErrorMessage = "Mã môn học không được bỏ trống")]
         [Display(Name = "Mã Môn Học")]
+
         public string MaMonHoc { get; set; }
         [Required(ErrorMessage = "Tên môn hoc không được bỏ trống")]
         [Display(Name = "Tên Môn Học")]
